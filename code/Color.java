@@ -6,7 +6,7 @@ import java.util.Scanner;
  * methods can be staticly imported
  *
  * @author YBZ
- * @version 1.0.0
+ * @version 2.0.0
  */
 public class Color
 {
@@ -53,6 +53,8 @@ public class Color
 	
 	/**
 	 * resets the color and background color of console
+	 * 
+	 * @since 1.0.0
 	 */
 	public static void reset()
 	{
@@ -61,6 +63,8 @@ public class Color
 
 	/**
 	 * clears console screen
+	 * 
+	 * @since 1.0.0
 	 */
 	public static void clearScreen()
 	{
@@ -69,6 +73,8 @@ public class Color
 
 	/**
 	 * changes screen color
+	 * 
+	 * @since 2.0.0
 	 */
 	public static void color(String color)
 	{
@@ -77,6 +83,8 @@ public class Color
 
 	/**
 	 * pauses the screen
+	 * 
+	 * @since 2.0.0
 	 */
 	public static void pause()
 	{

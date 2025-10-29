@@ -19,6 +19,8 @@ public class Logger
     
     /**
      * simple constructor initializes current version of logger
+     * 
+     * @since 1.0.0
      */
     public Logger()
     {
@@ -27,13 +29,22 @@ public class Logger
 
     /**
      * simple constructor initializes current version of logger and a specified folder for logs
+     * 
      * @param logFolder user specified log folder
+     * @since 1.0.0
      */
     public Logger(String logFolder)
     {
         this(new Date(), logFolder);
     }
 
+    /**
+     * full constructor initializes all fields
+     * 
+     * @param instance date instance
+     * @param logFolder log folder name
+     * @since 1.0.0
+     */
     private Logger(Date instance, String logFolder)
     {
         this.INSTANCE = instance;
@@ -44,6 +55,7 @@ public class Logger
      * get the date instance version of the logger
      * 
      * @return String of format YYYY-MM-DD
+     * @since 1.0.0
      */
     public String getInstance()
     {
@@ -54,6 +66,7 @@ public class Logger
      * get the folder name of logger
      * 
      * @return LOGFOLDER field
+     * @since 1.0.0
      */
     public String getFolder()
     {
@@ -66,10 +79,11 @@ public class Logger
     }
 
     /**
-     * logs exceptions
+     * logs exceptions with message and stack trace
      * 
      * @param e Exception with or without a message
      * @return success of log
+     * @since 1.0.0
      */
     public boolean log(Exception e)
     {
@@ -81,10 +95,11 @@ public class Logger
     }
 
     /**
-     * log with a message
+     * adds a log line with a message
      * 
      * @param message message to be logged
      * @return success of log
+     * @since 1.0.0
      */
     public boolean log(String message)
     {
@@ -102,6 +117,13 @@ public class Logger
         }
     }
 
+    /**
+     * returns the formated time like HH-MM-SS
+     * 
+     * @param date Date object to be formated
+     * @return formated string
+     * @since 1.0.0
+     */
     private static String formatTime(Date date)
     {
         int hours = date.getHours();
@@ -119,6 +141,13 @@ public class Logger
         return String.format("%s:%s:%s", h,m,s);
     }
     
+    /**
+     * returns the formated date like YYYY-MM-DD
+     * 
+     * @param date Date object to be formated
+     * @return formated string
+     * @since 1.0.0
+     */
     private static String formatDate(Date date)
     {
         int year = date.getYear()+1900;
