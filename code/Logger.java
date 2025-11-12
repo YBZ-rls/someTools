@@ -10,7 +10,7 @@ import java.util.Date;
  * Logger tool used to create log file and log actions / exceptions respectively
  * 
  * @author YBZ
- * @version 1.0.0
+ * @version 1.0.1
  */
 public class Logger
 {
@@ -99,7 +99,7 @@ public class Logger
      * 
      * @param message message to be logged
      * @return success of log
-     * @since 1.0.0
+     * @since 1.0.1
      */
     public boolean log(String message)
     {
