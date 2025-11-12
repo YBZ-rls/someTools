@@ -107,12 +107,14 @@ public class Logger
         String t = formatTime(time);
         String text = String.format("[%s] %s\n",t,message);
         try{
+            if (!(Files.exists(Paths.get(this.LOGFOLDER))))
+                Files.createDirectory(Paths.get(this.LOGFOLDER));
             if (!(Files.exists(getFile())))
                 Files.createFile(getFile());
             Files.write(getFile(), text.getBytes(), StandardOpenOption.APPEND);
             return true;
         } catch (IOException e){
-            System.out.println(e.getMessage());
+            System.out.println(e);
             return false;
         }
     }
