@@ -1,15 +1,16 @@
-
 import java.util.Scanner;
 
 /**
  * console color management
  * methods can be staticly imported
  *
- * @author YBZ
- * @version 2.0.0
+ * @author Yinbo Zhang
+ * @version 2.0.1
  */
 public class Color
 {
+	private static Scanner s = new Scanner(System.in);
+
 	public static final String RESET = "\u001B[0m";
 	
 	public static final String BLACK = "\u001B[30m";
@@ -84,12 +85,10 @@ public class Color
 	/**
 	 * pauses the screen
 	 * 
-	 * @since 2.0.0
+	 * @since 2.0.1
 	 */
 	public static void pause()
 	{
-		try (Scanner s = new Scanner(System.in)) {
-			s.nextLine();
-		}	
+		s.nextLine();
 	}
 }
