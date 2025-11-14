@@ -4,7 +4,7 @@ import java.util.Scanner;
  * console color management
  * methods can be staticly imported
  *
- * @author Yinbo Zhang
+ * @author YBZ
  * @version 2.0.1
  */
 public class Color
