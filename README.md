@@ -1,16 +1,41 @@
 # someTools
-self built tools for programming (only Java currently)  
+[![Java](https://img.shields.io/badge/Java-21-blue)](https://www.oracle.com/java/)
 
-*last updated: 2025-12-28*
+  
+    last updated: 2025-12-28
+Self-built tools for programming (only Java currently)
 
-## Logger.java
+## Table of Contents
+> *Available Tools*  
+> [Logger](#logger)  
+> [Color](#color)  
+> [Vigenere Cipher](#vigenere-cipher)  
+>
+> *Other*  
+> [Author](#author)  
+> [External Sources](#external-sources)
 
-Logger tool creates log file and messages made by the user or Exception messages and Exception stack trace
+## Logger
+    last updated: N/A
+    file(s): Logger.java
 
-## Color.java
+The logger tool creates log files and messages made by the user or Exception messages and Exception stack trace.
 
-Console level tool stores the color codes and some helper methods for running in the console
+## Color
+    last updated: N/A
+    file(s): Color.java
 
-## VigenereCipher.java
+Console level tool stores the color codes and some helper methods for running code in the console.
 
-Refactored encrypting and decrypting for vigenere cipher
+## Vigenere Cipher
+    last updated: 2025-12-28
+    file(s): VingenereCipher.java
+    notes: refactored code
+
+Used for encrypting and decrypting text using [Vigenere Cipher](https://en.wikipedia.org/wiki/Vigen%C3%A8re_cipher)
+
+### Author
+> *YBZ*
+
+### External Sources
+- [Vigenere Cipher Wikipedia Page](https://en.wikipedia.org/wiki/Vigen%C3%A8re_cipher)
