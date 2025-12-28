@@ -10,6 +10,7 @@ Self-built tools for programming (only Java currently)
 > [Logger](#logger)  
 > [Color](#color)  
 > [Vigenere Cipher](#vigenere-cipher)  
+> [Grid Data Structure](#grid-data-structure)  
 >
 > *Other*  
 > [Author](#author)  
@@ -32,7 +33,13 @@ Console level tool stores the color codes and some helper methods for running co
     file(s): VingenereCipher.java
     notes: refactored code
 
-Used for encrypting and decrypting text using [Vigenere Cipher](https://en.wikipedia.org/wiki/Vigen%C3%A8re_cipher)
+Used for encrypting and decrypting text using [Vigenere Cipher](https://en.wikipedia.org/wiki/Vigen%C3%A8re_cipher).
+
+## Grid Data Structure
+    last updated: 2025-12-28
+    file(s): Grid.java / GridNode.java
+
+A square grid-like data structure, each node connecting up to its 4 neighbors (north, south, east, west).
 
 ### Author
 > *YBZ*
