@@ -10,7 +10,7 @@ import java.util.ArrayList;
  * You can in turn change T to be of any Object value
  * 
  * @author YBZ
- * @version 1.0.0
+ * @version 1.0.1
  */
 public class Grid<T>
 {
@@ -163,11 +163,11 @@ public class Grid<T>
      * e.g. [3,4] (3rd column, 4th row counting from top left)
      * 
      * @return int array of position x, y
-     * @since 1.0.0
+     * @since 1.0.1
      */
     public int[] getPosition()
     {
-        throw new UnsupportedOperationException("Not yet implemented");
+        return new int[]{this.position[0], this.position[1]};
     }
 
     /**
