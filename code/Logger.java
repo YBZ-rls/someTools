@@ -10,13 +10,22 @@ import java.util.Date;
  * Logger tool used to create log file and log actions / exceptions respectively
  * 
  * @author YBZ
- * @version 1.0.1
+ * @version 1.1.0
  */
 public class Logger
 {
     private final Date INSTANCE;
     private final String LOGFOLDER;
     
+
+    private static final String INFO_HEADER = "INFO";
+    private static final String WARNING_HEADER = "WARNING";
+    private static final String ERROR_HEADER = "ERROR";
+    private static final String EXCEPTION_HEADER = "EXCEPTION";
+    private static final String DEBUG_HEADER = "DEBUG";
+    private static final String FAILED_HEADER = "FAILED";
+    private static final String SUCCESS_HEADER = "SUCCESS";
+
     /**
      * simple constructor initializes current version of logger
      * 
@@ -83,14 +92,14 @@ public class Logger
      * 
      * @param e Exception with or without a message
      * @return success of log
-     * @since 1.0.0
+     * @since 1.1.0
      */
     public boolean log(Exception e)
     {
         StringWriter sw = new StringWriter();
         PrintWriter pw = new PrintWriter(sw);
         e.printStackTrace(pw);
-        String s = sw.toString();
+        String s = String.format("%s %s", EXCEPTION_HEADER, sw.toString());
         return log(s);
     }
 
@@ -117,6 +126,78 @@ public class Logger
             System.out.println(e);
             return false;
         }
+    }
+
+    /**
+     * adds a log line with info
+     * 
+     * @param message message to be logged
+     * @return success of log
+     * @since 1.1.0
+     */
+    public boolean logInfo(String message)
+    {
+        return log(String.format("%s %s", INFO_HEADER, message));
+    }
+
+    /**
+     * adds a log line with warning
+     * 
+     * @param message message to be logged
+     * @return success of log
+     * @since 1.1.0
+     */
+    public boolean logWarning(String message)
+    {
+        return log(String.format("%s %s", WARNING_HEADER, message));
+    }
+
+    /**
+     * adds a log line with error
+     * 
+     * @param message message to be logged
+     * @return success of log
+     * @since 1.1.0
+     */
+    public boolean logError(String message)
+    {
+        return log(String.format("%s %s", ERROR_HEADER, message));
+    }
+
+    /**
+     * adds a log line with debug
+     * 
+     * @param message message to be logged
+     * @return success of log
+     * @since 1.1.0
+     */
+    public boolean logDebug(String message)
+    {
+        return log(String.format("%s %s", DEBUG_HEADER, message));
+    }
+
+    /**
+     * adds a log line with fail
+     * 
+     * @param message message to be logged
+     * @return success of log
+     * @since 1.1.0
+     */
+    public boolean logFail(String message)
+    {
+        return log(String.format("%s %s", FAILED_HEADER, message));
+    }
+
+    /**
+     * adds a log line with success
+     * 
+     * @param message message to be logged
+     * @return success of log
+     * @since 1.1.0
+     */
+    public boolean logSuccess(String message)
+    {
+        return log(String.format("%s %s", SUCCESS_HEADER, message));
     }
 
     /**
